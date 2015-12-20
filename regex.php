@@ -11,7 +11,7 @@ if (curl_errno($curl)) {
 
 curl_close($curl);
 
-$pattern = '/<div id="mw-content-text"(.*?)<\/html>/s';
+$pattern = '/<div id="mw-content-text"(.*?)</html>/s';
 if (preg_match($pattern, $page, $list))
     echo $list[0];
 else
